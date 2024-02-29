@@ -1,7 +1,7 @@
 package com.desafio.horizonteEletivo.controller;
 
-import com.desafio.horizonteEletivo.dto.EletivasDTO;
-import com.desafio.horizonteEletivo.service.EletivasService;
+import com.desafio.horizonteEletivo.dto.EletivaDTO;
+import com.desafio.horizonteEletivo.service.EletivaService;
 
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -11,28 +11,28 @@ import java.util.List;
 
 @RestController;
 @AllArgsConstructor;
-@RequestMapping("/eletivas")
-public class EletivasController {
+@RequestMapping("/eletiva")
+public class EletivaController {
     
-    private EletivasService eletivasService;
+    private EletivaService eletivaService;
     
     @GetMapping("/listar")
-    public ResponseEntity<List<EletivasDTO>> listarEletivas() {
+    public ResponseEntity<List<EletivaDTO>> listarEletiva() {
 
-        return ResponseEntity.ok(eletivasService.listarTodos());
+        return ResponseEntity.ok(eletivaService.listarTodos());
     }
 
     @GetMapping("/buscar/{id}")
-    public ResponseEntity<Eletivas> getEletivas(@PathVariable long id) {
+    public ResponseEntity<Eletiva> getEletiva(@PathVariable long id) {
 
-        return ResponseEntity.ok(eletivasService.pegarEletivasPeloId(id));
+        return ResponseEntity.ok(eletivaService.pegarEletivaPeloId(id));
     }
 
     @PostMapping("/atualizar/{id}")
-    public ResponseEntity<Void> atualizarEletivas(@PathVariable long id,
-            @Valid @RequestBody CreateUsuarioDTO eletivasAtualizar) {
+    public ResponseEntity<Void> atualizarEletiva(@PathVariable long id,
+            @Valid @RequestBody AlunoDTO eletivaAtualizar) {
 
-        alunoService.atualizarEletivas(eletivasAtualizar, id);
+        alunoService.atualizarEletiva(eletivaAtualizar, id);
 
         return ResponseEntity.noContent().build();
     }    
