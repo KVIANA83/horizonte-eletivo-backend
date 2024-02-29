@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Eletivas")
-public class Eletivas {
+@Table(name = "eletiva")
+public class Eletiva {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,11 +32,11 @@ public class Eletivas {
     }
     
 //Construtor vazio
-    public Eletivas(){
+    public Eletiva() {
     }
     
 //Construtor com argumentos
-    public Eletivas(long idEletiva, String nomeProfessor, int quantVagas, String nomeEletiva){
+    public Eletiva(long idEletiva, String nomeProfessor, int quantVagas, String nomeEletiva) {
         this.idEletiva = idEletiva;
         this.nomeProfessor = nomeProfessor;
         this.quantVagas = quantVagas;
