@@ -1,6 +1,6 @@
 package com.desafio.horizonteEletivo.repository;
 
-import com.desafio.horizonteEletivo.model.Eletivas;
+import com.desafio.horizonteEletivo.model.Eletiva;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface EletivasRepository extendes JpaRepository<Eletivas, Long> {
+public interface EletivaRepository extendes JpaRepository<Eletiva, Long> {
     
-    Optional<List<Eletivas>> findAllByNome(String nomeEletiva);
+    Optional<List<Eletiva>> findAllByNome(String nomeEletiva);
 }
