@@ -16,26 +16,23 @@ public class Eletiva {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @column(name ="id_eletiva")
+    @Column(name ="id_eletiva")
     private long idEletiva;
 
-    @column(name ="nome_professor")
+    @Column(name ="nome_professor")
     private String nomeProfessor;
 
-    @column(name ="quant_vagas")
+    @Column(name ="quant_vagas")
     private int quantVagas;
 
-    @column(name="nome_eletiva")
-    private String nomeEletiva
-        
-    }
+    @Column(name="nome_eletiva")
+    private String nomeEletiva;
     
-//Construtor vazio
+    // Construtor vazio
     public Eletiva() {
     }
     
-//Construtor com argumentos
+    // Construtor com argumentos
     public Eletiva(long idEletiva, String nomeProfessor, int quantVagas, String nomeEletiva) {
         this.idEletiva = idEletiva;
         this.nomeProfessor = nomeProfessor;
