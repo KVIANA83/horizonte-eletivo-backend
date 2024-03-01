@@ -11,34 +11,33 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="turmas")
+@Table(name = "turmas")
 public class Turmas {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @column(name = "id_turmas")
+    @Column(name = "id_turmas")
     private long idTurmas;
 
-    @column(name = "nome_turma")
+    @Column(name = "nome_turma")
     private String nomeTurma;
 
-    @column
-    private curso;
+    @Column
+    private String curso;
 
-    @column
+    @Column
     private String modalidade;
 
-    @column(name = "quant_vagas")
+    @Column(name = "quant_vagas")
     private int quantVagas;
 
-//Construtor vazio
-    public class Turmas() {
+    // Construtor vazio
+    public Turmas() {
     }
 
-//Construtor com argumentos 
-    public class Turmas(long idTurmas, String nomeTurma, String curso, String modalidade, int quantVagas) {
-        this.idTurma = idTurma;
+    // Construtor com argumentos 
+    public Turmas(long idTurmas, String nomeTurma, String curso, String modalidade, int quantVagas) {
+        this.idTurmas = idTurmas;
         this.nomeTurma = nomeTurma;
         this.curso = curso;
         this.modalidade = modalidade;
