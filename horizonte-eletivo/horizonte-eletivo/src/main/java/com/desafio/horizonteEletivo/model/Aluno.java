@@ -19,27 +19,31 @@ public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @column(name ="id_aluno")
+    @Column(name ="id_aluno")
     private long idAluno;
 
+    @Column
     private long matricula;
 
-    @column(name ="nome_aluno")
+    @Column(name ="nome_aluno")
     private String nomeAluno;
 
-    @column(name ="data_nascimento")
+    @Column(name ="data_nascimento")
     private int dataNascimento;
 
+    @Column
     private String sexo;
 
-    @column(name ="n_classe")
+    @Column(name ="n_classe")
     private int nClasse;
 
+    @Column
     private String turma;
 
-    @column(name ="cor_raca")
+    @Column(name ="cor_raca")
     private String corRaca;
 
+    @Column
     private String curso;
         
     }
