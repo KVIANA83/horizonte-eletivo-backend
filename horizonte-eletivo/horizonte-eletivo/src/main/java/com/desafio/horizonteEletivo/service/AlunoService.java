@@ -15,25 +15,52 @@ import java.util.List;
 @AllArgsConstructor
 public class AlunoService {
     
+    @Autowired
     private AlunoRepository alunoRepository;
     
-    public List<AlunoDTO>listarTodos() {
+    public alunoService(AlunoRepository alunoRepository) {
+        this.alunoRepository = alunoRepository;
+    }
+    
+    public List<AlunoDTO> listarTodos() {
         
-        var listarAlunos = alunoRepository.findAll();
-        
-        var alunosDTO = new ArrayList<AlunoDTO>();
-        
-        for(Aluno aluno : listaAlunos) {
-            
-                     /*   var AlunoDTO = AlunoDTO.builder()
-                    .telefone(usuario.getTelefone())
-                    .nomeSocial(usuario.getNomeSocial())
-                    .nomeCompleto(usuario.getNomeCompleto())
-                    .endereco(usuario.getEndereco())
-                    .email(usuario.getEmail())
-                    .build();
+        return null;
+    }
+    
+    public AlunoDTO pegarAlunoPeloId(long id) {
+        Optional<Aluno> alunoOptional = alunoRepository.findById(id);
+        if (alunoOptional.isPresent()) {
+            Aluno aluno = alunoOptional.get();
+            // Converter Aluno para AlunoDTO
+            return null;
+        }
+        return null;
+    }
 
-            alunoDTOS.add(alunoDTO); */
+    public void atualizarAluno(CreateAlunoDTO alunoAtualizar, long id) {
+        Optional<Aluno> alunoOptional = alunoRepository.findById(id);
+        if (alunoOptional.isPresent()) {
+            Aluno aluno = alunoOptional.get();
+            //Atualizar as informações do aluno
         }
     }
+
+    public void escolherEletiva(long alunoId, long eletivaId) {
+        Optional<Aluno> alunoOptional = alunoRepository.findById(alunoId);
+        if (alunoOptional.isPresent()) {
+            Aluno aluno = alunoOptional.get();
+            //Permitir o aluno escolher uma eletiva
+        }
+    }
+
+    public void trocarEletiva(long alunoId, long eletivaAtualId, long novaEletivaId) {
+        Optional<Aluno> alunoOptional = alunoRepository.findById(alunoId);
+        if (alunoOptional.isPresent()) {
+            Aluno aluno = alunoOptional.get();
+            //Permitir o aluno trocar de eletiva
+        }
+    }
+    
+    
+    
 }
