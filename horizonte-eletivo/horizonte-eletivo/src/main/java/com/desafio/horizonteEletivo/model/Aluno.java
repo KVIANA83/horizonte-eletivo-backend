@@ -29,7 +29,7 @@ public class Aluno {
     private String nomeAluno;
 
     @Column(name ="data_nascimento")
-    private int dataNascimento;
+    private LocalDate dataNascimento;
 
     @Column
     private String sexo;
@@ -53,7 +53,7 @@ public class Aluno {
     }
     
 //Construtor com argumentos
-    public Aluno(long idAluno, long matricula, String nomeAluno, int dataNascimento, String sexo, int nClasse, String turma, String corRaca, String curso){
+    public Aluno(long idAluno, long matricula, String nomeAluno, LocalDate dataNascimento, String sexo, int nClasse, String turma, String corRaca, String curso){
         this.idAluno = idAluno;
         this.matricula = matricula;
         this.nomeAluno = nomeAluno;
