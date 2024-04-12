@@ -31,16 +31,4 @@ public class Turmas {
     @Column(name = "quant_vagas")
     private int quantVagas;
 
-    // Construtor vazio
-    public Turmas() {
-    }
-
-    // Construtor com argumentos 
-    public Turmas(long idTurmas, String nomeTurma, String curso, String modalidade, int quantVagas) {
-        this.idTurmas = idTurmas;
-        this.nomeTurma = nomeTurma;
-        this.curso = curso;
-        this.modalidade = modalidade;
-        this.quantVagas = quantVagas;
-    }
 }
