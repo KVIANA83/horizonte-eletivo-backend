@@ -46,6 +46,4 @@ public class Aluno {
     @Column
     private String curso;
         
-    }
-    
 }
