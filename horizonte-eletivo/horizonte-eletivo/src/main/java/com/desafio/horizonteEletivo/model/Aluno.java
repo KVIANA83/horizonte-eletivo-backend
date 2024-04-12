@@ -48,20 +48,4 @@ public class Aluno {
         
     }
     
-//Construtor vazio
-    public Aluno(){
-    }
-    
-//Construtor com argumentos
-    public Aluno(long idAluno, long matricula, String nomeAluno, LocalDate dataNascimento, String sexo, int nClasse, String turma, String corRaca, String curso){
-        this.idAluno = idAluno;
-        this.matricula = matricula;
-        this.nomeAluno = nomeAluno;
-        this.dataNascimento = dataNascimento;
-        this.sexo = sexo;
-        this.nClasse = nClasse;
-        this.turma = turma;
-        this.corRaca = corRaca;
-        this.curso = curso;
-    }
 }
