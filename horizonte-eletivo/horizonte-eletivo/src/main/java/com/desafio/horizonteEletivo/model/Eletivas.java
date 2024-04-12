@@ -28,15 +28,4 @@ public class Eletiva {
     @Column(name="nome_eletiva")
     private String nomeEletiva;
     
-    // Construtor vazio
-    public Eletiva() {
-    }
-    
-    // Construtor com argumentos
-    public Eletiva(long idEletiva, String nomeProfessor, int quantVagas, String nomeEletiva) {
-        this.idEletiva = idEletiva;
-        this.nomeProfessor = nomeProfessor;
-        this.quantVagas = quantVagas;
-        this.nomeEletiva = nomeEletiva;
-    }
 }
