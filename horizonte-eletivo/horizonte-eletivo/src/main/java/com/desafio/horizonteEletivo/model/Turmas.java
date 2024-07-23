@@ -31,4 +31,8 @@ public class Turmas {
     @Column(name = "quant_vagas")
     private int quantVagas;
 
+    @OneToMany
+    @JoinColumn(name = "id_eletiva")
+    private List<Eletiva> eletivas;
+
 }
