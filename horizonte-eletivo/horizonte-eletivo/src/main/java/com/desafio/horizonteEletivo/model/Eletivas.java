@@ -28,4 +28,7 @@ public class Eletiva {
     @Column(name="nome_eletiva")
     private String nomeEletiva;
     
+    @OneToMany(mappedBy = "eletiva")
+    private List<Aluno> alunos;
+}
 }
