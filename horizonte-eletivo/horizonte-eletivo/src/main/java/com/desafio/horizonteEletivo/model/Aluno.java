@@ -46,4 +46,7 @@ public class Aluno {
     @Column
     private String curso;
         
+    @ManyToOne
+    @JoinColumn(name = "id_eletiva")
+    private Eletiva eletiva;
 }
